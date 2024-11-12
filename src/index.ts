@@ -1,4 +1,1 @@
-export const  Test = () => {
-
-    console.log("err")
-}
+export * from './components'

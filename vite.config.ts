@@ -2,11 +2,10 @@ import { defineConfig } from 'vite'
 import dts from "vite-plugin-dts";
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [
     react(),
-    dts({ rollupTypes: true })
+    dts({ rollupTypes: true, tsconfigPath: './tsconfig.app.json' })
   ],
   build: {
     target: 'esnext',
@@ -17,7 +16,14 @@ export default defineConfig({
       formats: ['es', 'cjs'],
     },
     rollupOptions: {
-      external: ['react','react-dom'],
+      external: ['react','react-dom',"react/jsx-runtime",],
+      output: {
+        globals: {
+          'react': 'react',
+          'react-dom': 'ReactDOM',
+          'react/jsx-runtime': 'react/jsx-runtime',
+        }
+      }
     },
   },
   
