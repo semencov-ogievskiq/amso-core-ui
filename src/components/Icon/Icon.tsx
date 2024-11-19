@@ -1,3 +1,5 @@
+'use client'
+
 import { FC, useMemo } from "react";
 import { IconProps, IconStyledState } from "./types";
 import { ICON_COLORS, ICON_SIZES, ICON_FILL_TYPES } from "./constants";

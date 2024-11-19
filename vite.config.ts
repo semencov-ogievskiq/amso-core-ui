@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import dts from "vite-plugin-dts";
 import react from '@vitejs/plugin-react'
+import preserveDirectives from 'rollup-plugin-preserve-directives';
 
 export default defineConfig({
   plugins: [
@@ -17,7 +18,9 @@ export default defineConfig({
     },
     rollupOptions: {
       external: ['react','react-dom',"react/jsx-runtime",],
+      plugins: [preserveDirectives()],
       output: {
+        preserveModules: true,
         globals: {
           'react': 'react',
           'react-dom': 'ReactDOM',

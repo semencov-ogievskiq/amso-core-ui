@@ -1,3 +1,5 @@
+'use client'
+
 import styled from "@emotion/styled";
 import { StyledComponentsProps } from "../../../types";
 import { IconStyledState } from "../types";
