@@ -1,5 +1,5 @@
 import { Theme } from "./types";
-import { ICON_DEFAULT_THEME_CONFIG } from "../components/Icon";
+import { ICON_DEFAULT_THEME_CONFIG } from "../components/Icon/constants";
 
 /**
  * Значение темы по умолчанию

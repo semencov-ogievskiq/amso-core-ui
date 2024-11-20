@@ -70,6 +70,10 @@ export type IconProps = {
      */
     stroke?: string
     /**
+     * Id для тестирования
+     */
+    testId?: string
+    /**
      * Событие клика по иконке
      */
     onClick?: MouseEventHandler<SVGElement>

@@ -2,7 +2,7 @@
 
 import { FC, useMemo } from "react";
 import { IconProps, IconStyledState } from "./types";
-import { ICON_COLORS, ICON_SIZES, ICON_FILL_TYPES } from "./constants";
+import { ICON_COLORS, ICON_SIZES, ICON_FILL_TYPES, ICON_DEFAULT_TEST_ID } from "./constants";
 import { StyledSVG } from "./styled";
 
 export const Icon: FC<IconProps> = props => {
@@ -15,6 +15,7 @@ export const Icon: FC<IconProps> = props => {
         style,
         fill,
         stroke,
+        testId = ICON_DEFAULT_TEST_ID,
         fillType = ICON_FILL_TYPES.FILL,
         color = ICON_COLORS.TEXT,
         size = ICON_SIZES.MEDIUM,
@@ -38,6 +39,7 @@ export const Icon: FC<IconProps> = props => {
 
     return (
         <StyledSVG
+            data-test-id={testId}
             styledState={styledState}
             height={height}
             width={width}

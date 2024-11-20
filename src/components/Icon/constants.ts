@@ -1,6 +1,7 @@
 import { BASE_SIZES, BASE_TEXT_COLOR, DIMENSION } from "../../constants";
 import { IconThemeConfig } from "./types";
 
+export const ICON_DEFAULT_TEST_ID = "icon"
 export const ICON_COLORS = {
     ...BASE_TEXT_COLOR,
 } as const 
