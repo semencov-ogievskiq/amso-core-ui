@@ -1,0 +1,45 @@
+import { Canvas, Meta, Source, Controls, ArgTypes } from '@storybook/blocks';
+ 
+import ComponentMeta, { Default, CdnFont } from './ConnectFont.stories';
+ 
+<Meta of={ComponentMeta} />
+ 
+# ConnectFont
+
+- [Описание](#описание)
+- [Базовый пример использования](#базовый-пример-использования)
+- [Подключение базового шрифта](#подключение-базового-шрифта)
+- [Подключение сторонних шрифтов](#подключение-сторонних-шрифтов)
+- [API](#api)
+
+## Описание
+ 
+Компонент ConnectFont преднозначен для подключения базового шрифта библиотеки компонентов, а так же любое количество шрифтов через CDN
+
+## Базовый пример использования
+
+Компонент рекомендуется подключать на уровне App приложения
+
+<Source code={`
+<ConnectFont connectBaseFont/>
+`}/>
+
+## Подключение базового шрифта
+
+Для использования базового шрифта темы, требуется установить флаг connectBaseFont
+
+<Canvas of={Default} />
+<Source of={Default} />
+<Controls of={Default} />
+
+## Подключение сторонних шрифтов
+
+Для подключения сторонних шрифтов, компонент принимает props url, в который можно передать как один url или массив urls ведущие на шрифты
+ 
+<Canvas of={CdnFont} />
+<Source of={CdnFont} />
+<Controls of={CdnFont} />
+
+## API
+
+<ArgTypes of={ComponentMeta} />

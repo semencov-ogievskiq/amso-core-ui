@@ -1,0 +1,1 @@
+export { ConnectFont } from './ConnectFont'
