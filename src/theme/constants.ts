@@ -1,5 +1,5 @@
-import { Theme } from "./types";
-import { ICON_DEFAULT_THEME_CONFIG } from "../components/Icon/constants";
+import { Theme } from "./types"
+import { ICON_DEFAULT_THEME_CONFIG } from "../components/Icon/constants"
 
 /**
  * Значение темы по умолчанию
@@ -52,6 +52,90 @@ export const DEFAULT_THEME: Theme = {
         info: "#099cb0",
         text: "#0d0d0d",
         subtext: "#262626",
+    },
+    typography: {
+        h1: {
+            fontFamily: "Roboto",
+            fontWeight: "300",
+            fontSize: "2.75rem",
+        },
+        h2: {
+            fontFamily: "Roboto",
+            fontWeight: "300",
+            fontSize: "2.5rem",
+        },
+        h3: {
+            fontFamily: "Roboto",
+            fontWeight: "400",
+            fontSize: "2.25rem",
+        },
+        h4: {
+            fontFamily: "Roboto",
+            fontWeight: "400",
+            fontSize: "2rem",
+        },
+        h5: {
+            fontFamily: "Roboto",
+            fontWeight: "400",
+            fontSize: "1.75rem",
+        },
+        h6: {
+            fontFamily: "Roboto",
+            fontWeight: "500",
+            fontSize: "1.5rem",
+        },
+        caption: {
+            fontFamily: "Roboto",
+            fontWeight: "400",
+            fontSize: "0.75rem",
+            lineHeight: "1.66",
+            letterSpacing: "0.03333em",
+        },
+        body1: {
+            fontFamily: "Roboto",
+            fontWeight: "400",
+            fontSize: "1.50rem"
+        },
+        body2: {
+            fontFamily: "Roboto",
+            fontWeight: "400",
+            fontSize: "1.25rem",
+        },
+        subtitle1: {
+            fontFamily: "Roboto",
+            fontWeight: "400",
+            fontSize: "1rem",
+        },
+        subtitle2: {
+            fontFamily: "Roboto",
+            fontWeight: "500",
+            fontSize: "0.75rem",
+        },
+        controlXLarge: {
+            fontFamily: "Roboto",
+            fontWeight: "500",
+            fontSize: "1.75rem",
+        },
+        controlLarge: {
+            fontFamily: "Roboto",
+            fontWeight: "500",
+            fontSize: "1.50rem",
+        },
+        controlMedium: {
+            fontFamily: "Roboto",
+            fontWeight: "500",
+            fontSize: "1.25rem",
+        },
+        controlSmall: {
+            fontFamily: "Roboto",
+            fontWeight: "500",
+            fontSize: "1rem",
+        },
+        controlXSmall: {
+            fontFamily: "Roboto",
+            fontWeight: "500",
+            fontSize: "0.75rem",
+        },
     },
     components: {
         Icon: ICON_DEFAULT_THEME_CONFIG

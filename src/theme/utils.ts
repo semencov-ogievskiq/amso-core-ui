@@ -1,5 +1,5 @@
 import { DEFAULT_THEME } from "./constants"
-import { SemanticColor, SemanticColors, TextColors, CurrentTheme } from "./types"
+import { SemanticColor, SemanticColors, TextColors, CurrentTheme, ThemeTypographyVariants, TypographyParams } from "./types"
 
 /**
  * Метод возвращает семантический цвет из темы.
@@ -24,4 +24,16 @@ export const  getSemanticColor = (type: keyof SemanticColors, color: keyof Seman
  */
 export const getTextColor = (color: keyof TextColors, currentTheme?: CurrentTheme): string => (
     (currentTheme && currentTheme?.textColors?.[color]) || DEFAULT_THEME.textColors[color]
+)
+
+/**
+ * Метод возвращает объект стилей шрифтов.
+ * Если не передана текущая тема то возвращает цвет из базовой темы.
+ * 
+ * @param variant - тип шрифта
+ * @param currentTheme - Текущая тема, по умолчанию undefined
+ * @returns string
+ */
+export const getTypographyParams = (variant: ThemeTypographyVariants, currentTheme?: CurrentTheme): TypographyParams => (
+    (currentTheme && currentTheme?.typography?.[variant]) || DEFAULT_THEME.typography[variant]
 )

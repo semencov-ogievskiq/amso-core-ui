@@ -1,13 +1,17 @@
-export { DEFAULT_THEME } from './constants'
+export { 
+    DEFAULT_THEME
+} from './constants'
 export type { 
     TextColors, 
     SemanticColor, 
     SemanticColors, 
     Theme,
     ThemeComponents,
-    CurrentTheme
+    CurrentTheme,
+    TypographyParams
 } from './types'
 export {
     getSemanticColor,
-    getTextColor
+    getTextColor,
+    getTypographyParams
 } from './utils'

@@ -1,0 +1,62 @@
+import { Canvas, Meta, Source, Controls, ArgTypes } from '@storybook/blocks';
+ 
+import ComponentMeta, { Default, Colors, Variants, Transform, NoWrap } from './Typography.stories';
+ 
+<Meta of={ComponentMeta} />
+ 
+# Typography
+
+- [Описание](#описание)
+- [Базовый пример использования](#базовый-пример-использования)
+- [Установка цвета](#установка-цвета)
+- [Установка варианта текста](#установка-варианта-текста)
+- [Установка трансформации текста](#установка-трансформации-текста)
+- [Установка запрета переноса текста](#установка-запрета-переноса-текста)
+- [API](#api)
+
+## Описание
+ 
+Компонент Typography предназначен для вывода текста на странице
+
+## Базовый пример использования
+
+Для использования нужно передать в children текст
+
+<Source code={` 
+<Typography>
+    This is an example of the text from your landing page
+</Typography>
+`}/>
+
+## Установка цвета
+
+Компонент Typography реализует props color с помощью которого можно выбрать цвет из темы
+ 
+<Canvas of={Colors} />
+<Controls of={Colors} />
+
+## Установка варианта текста
+
+Компонент Typography реализует props variant с помощью которого можно выбрать стилистику выводимого текста
+ 
+<Canvas of={Variants} />
+<Controls of={Variants} />
+
+## Установка трансформации текста
+
+Компонент Typography реализует props transform с помощью которого можно выбрать варивнт трансформации текста
+ 
+<Canvas of={Transform} />
+<Controls of={Transform} />
+
+## Установка запрета переноса текста
+
+Компонент Typography реализует props noWrap с помощью которого можно отключить перенос текста.
+Если у блока указана ширина, то текст будет сокращаться с троеточием
+ 
+<Canvas of={NoWrap} />
+<Controls of={NoWrap} />
+
+## API
+
+<ArgTypes of={ComponentMeta} />

@@ -1,4 +1,8 @@
 import { IconCurrentThemeConfig, IconThemeConfig } from "../components/Icon/types"
+import { BASE_TYPOGRAPHY_VARIANTS } from "../constants"
+import { Values } from "../types"
+
+export type ThemeTypographyVariants = Values<typeof BASE_TYPOGRAPHY_VARIANTS>
 
 export type SemanticColor = {
     default: string
@@ -27,6 +31,14 @@ export type SemanticColors<T = SemanticColor> = {
     info: T
 }
 
+export type TypographyParams = {
+    fontFamily?: string
+    fontWeight?: string
+    fontSize: string
+    lineHeight?: string
+    letterSpacing?: string
+}
+
 export type ThemeComponents = {
     Icon: IconThemeConfig
 }
@@ -38,11 +50,13 @@ export type CurrentThemeComponents = {
 export type Theme = {
     semanticColors: SemanticColors
     textColors: TextColors
+    typography: Record<ThemeTypographyVariants,TypographyParams>
     components: ThemeComponents
 }
 
 export type CurrentTheme = {
     semanticColors?: Partial<SemanticColors<Partial<SemanticColor>>>
     textColors?: Partial<TextColors>
+    typography?: Partial<Record<ThemeTypographyVariants,TypographyParams>>
     components?: CurrentThemeComponents
 }

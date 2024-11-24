@@ -1,4 +1,4 @@
-import { MouseEventHandler, PointerEventHandler, ReactNode, StyleHTMLAttributes } from "react"
+import { CSSProperties, MouseEventHandler, PointerEventHandler, ReactNode } from "react"
 import { ICON_COLORS, ICON_FILL_TYPES, ICON_SIZES } from "./constants"
 import { Values } from "../../types"
 
@@ -60,7 +60,7 @@ export type IconProps = {
     /**
      * Объект стилей 
      */
-    style?: StyleHTMLAttributes<SVGAElement>
+    style?: CSSProperties
     /**
      * Цвет заливки ( перебивает color c fillType равным "fill" )
      */
