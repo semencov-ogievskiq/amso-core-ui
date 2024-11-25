@@ -14,16 +14,19 @@ export const StyledSVG = styled("svg")<StyledComponentsProps<IconStyledState>>((
         isSetFillProps,
         isSetStrokeProps
     } = styledState
+
+    const computedColor = theme?.components?.Icon?.colors?.[color] || getTextColor(color, theme)
+    const computedSize = theme.components?.Icon?.sizes?.[size] || DEFAULT_THEME.components.Icon.sizes[size]
     
     return {
         display: "inline-block",
         ...( fillType === ICON_FILL_TYPES.FILL && !isSetFillProps && {
-            fill: getTextColor(color, theme)
+            fill: computedColor
         }),
         ...( fillType === ICON_FILL_TYPES.STROKE && !isSetStrokeProps && {
-            stroke: getTextColor(color, theme)
+            stroke: computedColor
         }),
-        height: theme.components?.Icon?.sizes?.[size] || DEFAULT_THEME.components.Icon.sizes[size],
-        width: theme.components?.Icon?.sizes?.[size] || DEFAULT_THEME.components.Icon.sizes[size],
+        height: computedSize,
+        width: computedSize,
     }
 })

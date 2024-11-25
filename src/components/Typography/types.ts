@@ -19,7 +19,7 @@ export type TypographyStyledState = {
 }
 
 export type TypographyThemeConfig = {
-    
+    colors?: Record<TypographyColors,string>
 }
 
 export type TypographyCurrentThemeConfig = Partial<TypographyThemeConfig>

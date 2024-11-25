@@ -14,11 +14,13 @@ export const StyledText = styled("span")<{ styledState: TypographyStyledState }>
         noWrap
     } = styledState
 
+    const computedColor = theme?.components?.Typography?.colors?.[color] || getTextColor(color,theme)
+
     return {
         display: "inline-block",
         textAlign: align,
         textTransform: transform,
-        color: getTextColor(color,theme),
+        color: computedColor,
         width: fullWidth? "100%" : "initial",
         height: fullHeight? "100%" : "initial",
         ...(variant !== TYPOGRAPHY_VARIANTS.INHERIT && getTypographyParams(variant,theme)),

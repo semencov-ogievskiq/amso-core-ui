@@ -1,5 +1,6 @@
 import { Theme } from "./types"
 import { ICON_DEFAULT_THEME_CONFIG } from "../components/Icon/constants"
+import { TYPOGRAPHY_DEFAULT_THEME_CONFIG } from "../components/Typography/constants"
 
 /**
  * Значение темы по умолчанию
@@ -138,6 +139,8 @@ export const DEFAULT_THEME: Theme = {
         },
     },
     components: {
-        Icon: ICON_DEFAULT_THEME_CONFIG
+        Icon: ICON_DEFAULT_THEME_CONFIG,
+        Typography: TYPOGRAPHY_DEFAULT_THEME_CONFIG
+        
     }
 }

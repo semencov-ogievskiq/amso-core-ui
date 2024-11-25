@@ -1,4 +1,5 @@
 import { IconCurrentThemeConfig, IconThemeConfig } from "../components/Icon/types"
+import { TypographyCurrentThemeConfig, TypographyThemeConfig } from "../components/Typography/types"
 import { BASE_TYPOGRAPHY_VARIANTS } from "../constants"
 import { Values } from "../types"
 
@@ -41,10 +42,12 @@ export type TypographyParams = {
 
 export type ThemeComponents = {
     Icon: IconThemeConfig
+    Typography: TypographyThemeConfig
 }
 
 export type CurrentThemeComponents = {
     Icon?: IconCurrentThemeConfig
+    Typography?: TypographyCurrentThemeConfig
 }
 
 export type Theme = {

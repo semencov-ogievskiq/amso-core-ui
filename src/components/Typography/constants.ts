@@ -1,4 +1,5 @@
 import { BASE_TEXT_COLOR, BASE_TYPOGRAPHY_VARIANTS } from "../../constants"
+import { TypographyThemeConfig } from "./types"
 
 export const TYPOGRAPHY_DEFAULT_TEST_ID = "typography"
 
@@ -38,3 +39,5 @@ export const TYPOGRAPHY_TRANSFORMS = {
     INHERIT: "inherit",
     INITIAL: "initial",
 } as const
+
+export const TYPOGRAPHY_DEFAULT_THEME_CONFIG: TypographyThemeConfig = {}
