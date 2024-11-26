@@ -1,146 +1,125 @@
-import { Theme } from "./types"
-import { ICON_DEFAULT_THEME_CONFIG } from "../components/Icon/constants"
-import { TYPOGRAPHY_DEFAULT_THEME_CONFIG } from "../components/Typography/constants"
+/**
+ * Группы семантических цветов
+ */
+export const SEMANTIC_COLORS_GROUPS = {
+    /**
+     * Используется на элементах несущие первостепенный характер
+     */
+    PRIMARY: "primary",
+    /**
+     * Используется на элементах несущие второстепенный характер
+     */
+    SECONDARY: "secondary",
+    /**
+     * Используется на элементах несущие предупреждающий характер
+     */
+    WARNING: "warning",
+    /**
+     * Используется на элементах несущие успешный характер
+     */
+    SUCCESS: "success",
+    /**
+     * Используется на элементах несущие опасный характер
+     */
+    ERROR: "error",
+    /**
+     * Используется на элементаах несущие информационный характер
+     */
+    INFO: "info"
+} as const
 
 /**
- * Значение темы по умолчанию
+ * Семантические цвета
  */
-export const DEFAULT_THEME: Theme = {
-    semanticColors: {
-        primary: {
-            default: "#1b63f2",
-            light: "#3574f2",
-            dark: "#0553f0",
-            internal: "#ffffff"
-        },
-        secondary: {
-            default: "#686869",
-            light: "#949699",
-            dark: "#555657",
-            internal: "#ffffff"
-        },
-        warning: {
-            default: "#c4c04b",
-            light: "#c4c168",
-            dark: "#c2bd30",
-            internal: "#ffffff"
-        },
-        success: {
-            default: "#5dc443",
-            light: "#79c765",
-            dark: "#3ebd1e",
-            internal: "#ffffff"
-        },
-        error: {
-            default: "#bf5041",
-            light: "#bf6458",
-            dark: "#bf4232",
-            internal: "#ffffff"
-        },
-        info: {
-            default: "#3cb2c2",
-            light: "#71b6bf",
-            dark: "#099cb0",
-            internal: "#ffffff"
-        },
-    },
-    textColors: {
-        primary: "#0553f0",
-        secondary: "#555657",
-        warning: "#c2bd30",
-        success: "#3ebd1e",
-        error: "#bf4232",
-        info: "#099cb0",
-        text: "#0d0d0d",
-        subtext: "#262626",
-    },
-    typography: {
-        h1: {
-            fontFamily: "Roboto",
-            fontWeight: "300",
-            fontSize: "2.75rem",
-        },
-        h2: {
-            fontFamily: "Roboto",
-            fontWeight: "300",
-            fontSize: "2.5rem",
-        },
-        h3: {
-            fontFamily: "Roboto",
-            fontWeight: "400",
-            fontSize: "2.25rem",
-        },
-        h4: {
-            fontFamily: "Roboto",
-            fontWeight: "400",
-            fontSize: "2rem",
-        },
-        h5: {
-            fontFamily: "Roboto",
-            fontWeight: "400",
-            fontSize: "1.75rem",
-        },
-        h6: {
-            fontFamily: "Roboto",
-            fontWeight: "500",
-            fontSize: "1.5rem",
-        },
-        caption: {
-            fontFamily: "Roboto",
-            fontWeight: "400",
-            fontSize: "0.75rem",
-            lineHeight: "1.66",
-            letterSpacing: "0.03333em",
-        },
-        body1: {
-            fontFamily: "Roboto",
-            fontWeight: "400",
-            fontSize: "1.50rem"
-        },
-        body2: {
-            fontFamily: "Roboto",
-            fontWeight: "400",
-            fontSize: "1.25rem",
-        },
-        subtitle1: {
-            fontFamily: "Roboto",
-            fontWeight: "400",
-            fontSize: "1rem",
-        },
-        subtitle2: {
-            fontFamily: "Roboto",
-            fontWeight: "500",
-            fontSize: "0.75rem",
-        },
-        controlXLarge: {
-            fontFamily: "Roboto",
-            fontWeight: "500",
-            fontSize: "1.75rem",
-        },
-        controlLarge: {
-            fontFamily: "Roboto",
-            fontWeight: "500",
-            fontSize: "1.50rem",
-        },
-        controlMedium: {
-            fontFamily: "Roboto",
-            fontWeight: "500",
-            fontSize: "1.25rem",
-        },
-        controlSmall: {
-            fontFamily: "Roboto",
-            fontWeight: "500",
-            fontSize: "1rem",
-        },
-        controlXSmall: {
-            fontFamily: "Roboto",
-            fontWeight: "500",
-            fontSize: "0.75rem",
-        },
-    },
-    components: {
-        Icon: ICON_DEFAULT_THEME_CONFIG,
-        Typography: TYPOGRAPHY_DEFAULT_THEME_CONFIG
-        
-    }
-}
+export const SEMANTIC_COLORS = {
+    /**
+     * Основной цвет
+     */
+    DEFAULT: "default",
+    /**
+     * Второстепенный ( наведение, фон и т д)
+     */
+    LIGHT: "light",
+    /**
+     * Подчеркивающий ( совершение действия )
+     */
+    DARK: "dark",
+    /**
+     * Обратный цвет ( текст на основном цвете)
+     */
+    INTERNAL: "internal"
+} as const
+
+/**
+ * Цвета используемые на отключенных элементах
+ */
+export const DISABLED_COLORS = {
+    /**
+     * Основной цвет
+     */
+    DEFAULT: "default",
+    /**
+     * Обратный цвет ( текст на основном цвете)
+     */
+    INTERNAL: "internal"
+} as const
+
+/**
+ * Типы шрифтов
+ */
+export const TYPOGRAPHY_TYPES = {
+    H1:'h1',
+    H2: 'h2',
+    H3: 'h3',
+    H4: 'h4',
+    H5: 'h5',
+    H6: 'h6',
+    CAPTION: 'caption',
+    BODY1: 'body1',
+    BODY2: 'body2',
+    SUBTITLE1: 'subtitle1',
+    SUBTITLE2: 'subtitle2',
+    CONTROL_XLARGE: 'controlXLarge',
+    CONTROL_LARGE: 'controlLarge',
+    CONTROL_MEDIUM: 'controlMedium',
+    CONTROL_SMALL: 'controlSmall',
+    CONTROL_XSMALL: 'controlXSmall',
+} as const
+
+/**
+ * Цвета используемые для текста
+ */
+export const TEXT_COLORS = {
+    /**
+     * Используется на элементах несущие первостепенный характер
+     */
+    PRIMARY: "primary",
+    /**
+     * Используется на элементах несущие второстепенный характер
+     */
+    SECONDARY: "secondary",
+    /**
+     * Используется на элементах несущие предупреждающий характер
+     */
+    WARNING: "warning",
+    /**
+     * Используется на элементах несущие успешный характер
+     */
+    SUCCESS: "success",
+    /**
+     * Используется на элементах несущие опасный характер
+     */
+    ERROR: "error",
+    /**
+     * Используется на элементаах несущие информационный характер
+     */
+    INFO: "info",
+    /**
+     * Используется для обычного текста
+     */
+    TEXT: "text",
+    /**
+     * Используется для вспомогательного текста
+     */
+    SUBTEXT: "subtext"
+} as const

@@ -1,5 +1,5 @@
-import { DEFAULT_THEME } from "./constants"
-import { SemanticColor, SemanticColors, TextColors, CurrentTheme, ThemeTypographyVariants, TypographyParams } from "./types"
+import { DEFAULT_THEME } from "./DEFAULT_THEME"
+import { CurrentTheme, ThemeSemanticColors, ThemeSemanticColorsGroups, ThemeTextColors, ThemeTypographyStyles, ThemeTypographyTypes } from "./types"
 
 /**
  * Метод возвращает семантический цвет из темы.
@@ -10,7 +10,7 @@ import { SemanticColor, SemanticColors, TextColors, CurrentTheme, ThemeTypograph
  * @param currentTheme - Текущая тема, по умолчанию undefined
  * @returns string
  */
-export const  getSemanticColor = (type: keyof SemanticColors, color: keyof SemanticColor, currentTheme?: CurrentTheme): string => (
+export const  getSemanticColor = (type: ThemeSemanticColorsGroups, color: ThemeSemanticColors, currentTheme?: CurrentTheme): string => (
     (currentTheme && currentTheme?.semanticColors?.[type]?.[color]) || DEFAULT_THEME.semanticColors[type][color]
 ) 
 
@@ -22,7 +22,7 @@ export const  getSemanticColor = (type: keyof SemanticColors, color: keyof Seman
  * @param currentTheme - Текущая тема, по умолчанию undefined
  * @returns string
  */
-export const getTextColor = (color: keyof TextColors, currentTheme?: CurrentTheme): string => (
+export const getTextColor = (color: ThemeTextColors, currentTheme?: CurrentTheme): string => (
     (currentTheme && currentTheme?.textColors?.[color]) || DEFAULT_THEME.textColors[color]
 )
 
@@ -34,6 +34,6 @@ export const getTextColor = (color: keyof TextColors, currentTheme?: CurrentThem
  * @param currentTheme - Текущая тема, по умолчанию undefined
  * @returns string
  */
-export const getTypographyParams = (variant: ThemeTypographyVariants, currentTheme?: CurrentTheme): TypographyParams => (
+export const getTypographyParams = (variant: ThemeTypographyTypes, currentTheme?: CurrentTheme): ThemeTypographyStyles => (
     (currentTheme && currentTheme?.typography?.[variant]) || DEFAULT_THEME.typography[variant]
 )

@@ -1,38 +1,21 @@
 import { IconCurrentThemeConfig, IconThemeConfig } from "../components/Icon/types"
+import { LoaderThemeConfig } from "../components/Loader/types"
 import { TypographyCurrentThemeConfig, TypographyThemeConfig } from "../components/Typography/types"
-import { BASE_TYPOGRAPHY_VARIANTS } from "../constants"
 import { Values } from "../types"
+import { DISABLED_COLORS, SEMANTIC_COLORS, SEMANTIC_COLORS_GROUPS, TEXT_COLORS, TYPOGRAPHY_TYPES } from "./constants"
 
-export type ThemeTypographyVariants = Values<typeof BASE_TYPOGRAPHY_VARIANTS>
+export type ThemeSemanticColorsGroups = Values<typeof SEMANTIC_COLORS_GROUPS>
+export type ThemeSemanticColors = Values<typeof SEMANTIC_COLORS>
+export type ThemeDisabledColors = Values<typeof DISABLED_COLORS>
+export type ThemeTypographyTypes = Values<typeof TYPOGRAPHY_TYPES>
+export type ThemeTextColors = Values<typeof TEXT_COLORS>
 
-export type SemanticColor = {
-    default: string
-    light: string
-    dark: string
-    internal: string
-}
+export type ThemeSemanticColor = string
+export type ThemeDisabledColor = string
+export type ThemeTextColor = string
+export type ThemeSemanticColorsGroup = Record<ThemeSemanticColors,ThemeSemanticColor>
 
-export type TextColors = {
-    primary: string
-    secondary: string
-    warning: string
-    success: string
-    error: string
-    info: string
-    text: string
-    subtext: string
-}
-
-export type SemanticColors<T = SemanticColor> = {
-    primary: T
-    secondary: T
-    warning: T
-    success: T
-    error: T
-    info: T
-}
-
-export type TypographyParams = {
+export type ThemeTypographyStyles = {
     fontFamily?: string
     fontWeight?: string
     fontSize: string
@@ -43,23 +26,27 @@ export type TypographyParams = {
 export type ThemeComponents = {
     Icon: IconThemeConfig
     Typography: TypographyThemeConfig
+    Loader: LoaderThemeConfig
 }
 
 export type CurrentThemeComponents = {
     Icon?: IconCurrentThemeConfig
     Typography?: TypographyCurrentThemeConfig
+    Loader?: LoaderThemeConfig
 }
 
 export type Theme = {
-    semanticColors: SemanticColors
-    textColors: TextColors
-    typography: Record<ThemeTypographyVariants,TypographyParams>
+    semanticColors: Record<ThemeSemanticColorsGroups,ThemeSemanticColorsGroup>
+    textColors: Record<ThemeTextColors,ThemeTextColor>
+    disabledColors: Record<ThemeDisabledColors,ThemeDisabledColor>
+    typography: Record<ThemeTypographyTypes,ThemeTypographyStyles>
     components: ThemeComponents
 }
 
 export type CurrentTheme = {
-    semanticColors?: Partial<SemanticColors<Partial<SemanticColor>>>
-    textColors?: Partial<TextColors>
-    typography?: Partial<Record<ThemeTypographyVariants,TypographyParams>>
+    semanticColors?: Partial<Record<ThemeSemanticColorsGroups,Partial<ThemeSemanticColorsGroup>>>
+    textColors?: Partial<Record<ThemeTextColors,ThemeTextColor>>
+    disabledColors?: Partial<Record<ThemeDisabledColors,ThemeDisabledColor>>
+    typography?: Partial<Record<ThemeTypographyTypes,ThemeTypographyStyles>>
     components?: CurrentThemeComponents
 }

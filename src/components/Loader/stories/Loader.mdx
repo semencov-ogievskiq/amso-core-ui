@@ -1,0 +1,63 @@
+import { Canvas, Meta, Source, Controls, ArgTypes } from '@storybook/blocks';
+ 
+import ComponentMeta, { Default, Colors, Sizes } from './Loader.stories';
+ 
+<Meta of={ComponentMeta} />
+ 
+# Loader
+
+- [Описание](#описание)
+- [Базовый пример использования](#базовый-пример-использования)
+- [Установка цвета](#установка-цвета)
+- [Установка размера](#установка-размера)
+- [API](#api) 
+
+## Описание
+ 
+Компонент Loader используется для указания статуса загрузки или выполнения какого то действия
+
+## Базовый пример использования
+
+<Source code={`
+    <Loader /
+`}/>
+
+## Установка цвета
+
+Компонент Loader реализует props color с помощью которого можно выбрать цвет из темы
+ 
+<Canvas of={Colors} />
+<Controls of={Colors} />
+
+Так же для компонента можно явно указать цвет через тему под конкретный выбранный props color, через настройку theme.components.Loader.colors
+Пример настройки:
+
+<Source code={`
+{
+    [LOADER_COLORS.SUCCESS]: "red",
+}
+`} />
+
+## Установка размера
+
+Компонент поддерживает указание размера иконки через props size
+
+<Canvas of={Sizes} />
+<Controls of={Sizes} />
+
+Сам размер определяется темой через настройку theme.components.Loader.sizes.
+Значение по умолчанию:
+
+<Source code={`
+{
+    [LOADER_SIZES.X_LARGE]: DIMENSION[32],
+    [LOADER_SIZES.LARGE]: DIMENSION[28],
+    [LOADER_SIZES.MEDIUM]: DIMENSION[24],
+    [LOADER_SIZES.SMALL]: DIMENSION[20],
+    [LOADER_SIZES.X_SMALL]: DIMENSION[16]
+}
+`} />
+
+## API
+
+<ArgTypes of={ComponentMeta} />

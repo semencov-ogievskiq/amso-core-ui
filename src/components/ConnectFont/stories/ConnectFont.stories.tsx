@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { ConnectFont } from '../ConnectFont';
  
 const meta: Meta<typeof ConnectFont> = {
-  title: 'Base/ConnectFont',
+  title: 'Technical/ConnectFont',
   component: ConnectFont,
 };
  

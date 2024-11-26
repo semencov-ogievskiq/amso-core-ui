@@ -12,6 +12,8 @@ export type IconStyledState = {
     fillType: IconFillTypes
     isSetFillProps: boolean
     isSetStrokeProps: boolean
+    isSetHeightProps: boolean
+    isSetWidthProps: boolean
 }
 
 export type IconThemeConfig = {
@@ -48,11 +50,11 @@ export type IconProps = {
     /**
      * Ширина иконки ( переопределяет значение из size )
      */
-    width?: string
+    width?: string | number
     /**
      * Высота иконки ( переопределяет значение из size )
      */
-    height?: string
+    height?: string | number
     /**
      * Перечисление css класов
      */

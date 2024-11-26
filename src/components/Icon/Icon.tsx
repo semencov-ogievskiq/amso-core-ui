@@ -34,8 +34,10 @@ export const Icon: FC<IconProps> = props => {
         size,
         fillType,
         isSetFillProps: !!fill,
-        isSetStrokeProps: !!stroke
-    }),[color,size,fillType,fill,stroke])
+        isSetStrokeProps: !!stroke,
+        isSetHeightProps: !!height,
+        isSetWidthProps: !!width
+    }),[color,size,fillType,fill,stroke,height,width])
 
     return (
         <StyledSVG

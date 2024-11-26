@@ -3,7 +3,7 @@ import { Icon } from '../Icon';
 import { ICON_COLORS, ICON_SIZES } from '../constants';
  
 const meta: Meta<typeof Icon> = {
-  title: 'Base/Icon',
+  title: 'BaseComponents/Icon',
   component: Icon,
   render: args => (
     <Icon {...args} viewBox='0 -960 960 960'>

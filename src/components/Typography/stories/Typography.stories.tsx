@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Typography } from '../Typography';
  
 const meta: Meta<typeof Typography> = {
-  title: 'Base/Typography',
+  title: 'BaseComponents/Typography',
   component: Typography,
   args: {
     children: "This is an example of the text from your landing page"

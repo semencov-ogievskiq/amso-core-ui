@@ -9,6 +9,6 @@ export type ConnectFontProps = {
      * Флаг подключения базового шрифта
      */
     connectBaseFont?: boolean
-
+    
     children?: ReactNode
 }

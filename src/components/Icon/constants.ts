@@ -1,13 +1,14 @@
-import { BASE_SIZES, BASE_TEXT_COLOR, DIMENSION } from "../../constants";
+import { DIMENSION, SIZES } from "../../constants";
+import { TEXT_COLORS } from "../../theme";
 import { IconThemeConfig } from "./types";
 
 export const ICON_DEFAULT_TEST_ID = "icon"
 export const ICON_COLORS = {
-    ...BASE_TEXT_COLOR,
+    ...TEXT_COLORS,
 } as const 
 
 export const ICON_SIZES = {
-    ...BASE_SIZES
+    ...SIZES
 } as const
 
 export const ICON_FILL_TYPES = {

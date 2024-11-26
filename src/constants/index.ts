@@ -1,5 +1,2 @@
-export * from './BASE_SEMANTIC_COLORS'
-export * from './BASE_TEXT_COLORS'
-export * from './BASE_SIZES'
+export * from './SIZES'
 export * from './DIMENSIONS'
-export * from './BASE_TYPOGRAPHY_VARIANTS'

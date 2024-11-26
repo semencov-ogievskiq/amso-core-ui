@@ -12,7 +12,9 @@ export const StyledSVG = styled("svg")<StyledComponentsProps<IconStyledState>>((
         size,
         fillType,
         isSetFillProps,
-        isSetStrokeProps
+        isSetStrokeProps,
+        isSetHeightProps,
+        isSetWidthProps
     } = styledState
 
     const computedColor = theme?.components?.Icon?.colors?.[color] || getTextColor(color, theme)
@@ -26,7 +28,11 @@ export const StyledSVG = styled("svg")<StyledComponentsProps<IconStyledState>>((
         ...( fillType === ICON_FILL_TYPES.STROKE && !isSetStrokeProps && {
             stroke: computedColor
         }),
-        height: computedSize,
-        width: computedSize,
+        ...( !isSetHeightProps && {
+            height: computedSize,
+        }),
+        ...( !isSetWidthProps && {
+            width: computedSize,
+        })
     }
 })
